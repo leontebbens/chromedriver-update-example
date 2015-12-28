@@ -1,0 +1,22 @@
+//buildscript {
+//    repositories {
+//        mavenLocal()
+//        jcenter()
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath 'eu.leontebbens.gradle:chromedriver-updater-plugin:1.2'
+//    }
+//}
+
+plugins {
+    id "eu.leontebbens.gradle.chromedriver-updater" version "1.2"
+}
+
+apply plugin: "maven"
+apply plugin: "eu.leontebbens.gradle.chromedriver-updater"
+
+
+// run:
+// ./gradlew updateChromedriver
+// ./gradlew checkChromedriver
