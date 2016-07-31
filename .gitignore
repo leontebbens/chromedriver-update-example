@@ -5,5 +5,5 @@ bin/
 .settings/
 .classpath
 .project
-.idea/workspace.xml
+.idea/
 .iml
