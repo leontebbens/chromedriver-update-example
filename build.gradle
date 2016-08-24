@@ -16,6 +16,7 @@ plugins {
 apply plugin: "maven"
 apply plugin: "eu.leontebbens.gradle.chromedriver-updater"
 
+// println(System.getProperty("webdriver.chrome.driver"))
 
 // run:
 // ./gradlew updateChromedriver
