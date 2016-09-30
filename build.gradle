@@ -5,12 +5,12 @@
 //        mavenCentral()
 //    }
 //    dependencies {
-//        classpath 'eu.leontebbens.gradle:chromedriver-updater-plugin:1.4'
+//        classpath 'eu.leontebbens.gradle:chromedriver-updater-plugin:1.5'
 //    }
 //}
 
 plugins {
-    id "eu.leontebbens.gradle.chromedriver-updater" version "1.4"
+    id "eu.leontebbens.gradle.chromedriver-updater" version "1.5"
 }
 
 apply plugin: "maven"
