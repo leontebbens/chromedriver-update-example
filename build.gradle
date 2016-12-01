@@ -5,7 +5,7 @@
 //        mavenCentral()
 //    }
 //    dependencies {
-//        classpath 'eu.leontebbens.gradle:chromedriver-updater-plugin:1.5'
+//        classpath 'eu.leontebbens.gradle:chromedriver-updater-plugin:1.6'
 //    }
 //}
 
@@ -16,7 +16,17 @@ plugins {
 apply plugin: "maven"
 apply plugin: "eu.leontebbens.gradle.chromedriver-updater"
 
-// println(System.getProperty("webdriver.chrome.driver"))
+
+
+task integrationTest(type: Test, dependsOn: updateChromedriver) {
+    systemProperties = [
+            'webdriver.chrome.driver' : "${updateChromedriver.driverLocation}"
+    ]
+
+    println(systemProperties."webdriver.chrome.driver")
+
+}
+
 
 // run:
 // ./gradlew updateChromedriver
